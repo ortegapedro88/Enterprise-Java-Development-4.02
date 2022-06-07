@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 public class Doctor {
     @Id
-    private long idEmployee;
+    private long id;
     private String department;
     private String name;
     @Enumerated(EnumType.STRING)
@@ -18,12 +18,12 @@ public class Doctor {
     @OneToMany (mappedBy = "admittedBy")
     private List<Patient> patientsList;
 
-    public long getIdEmployee() {
-        return idEmployee;
+    public long getId() {
+        return id;
     }
 
-    public void setIdEmployee(long idEmployee) {
-        this.idEmployee = idEmployee;
+    public void setId(long idEmployee) {
+        this.id = idEmployee;
     }
 
     public String getDepartment() {
